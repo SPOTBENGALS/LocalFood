@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "paybooc";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./paybooc Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "paybooc";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./paybooc Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "paybooc";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./paybooc Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "paybooc";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./paybooc ExtraBold.woff") format("woff");
+}
