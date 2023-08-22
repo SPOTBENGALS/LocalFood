@@ -10,7 +10,7 @@
 
 - React
 - Typescipt
-- css-in-JS
+- Css-in-JS
 - zustand
 
 ### 주요 기능
