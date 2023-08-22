@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "paybooc";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: "paybooc";
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
