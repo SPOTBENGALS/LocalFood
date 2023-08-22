@@ -1,5 +1,6 @@
-import Footer from "Footer/Footer";
+import { useParams } from "react-router-dom";
 import Header from "Header/Header";
+import Footer from "Footer/Footer";
 import Submenu from "Pages/Parts/Submenu";
 import GoBackButton from "../Components/GoBackButton";
 import MobileHeader from "Header/MobileHeader";
@@ -8,8 +9,9 @@ import styled from "@emotion/styled";
 import { NOTICEDATA, RECIPEDATA, REVIEWDATA, APPLYEVENTDATA, EVENTDATA } from "Store/BoardData";
 
 function BoardPost({ title }: { title: string }) {
-  const postId: number = parseInt(window.location.pathname.slice(8, window.location.pathname.length));
-  let post = NOTICEDATA.filter((post) => post.id === postId)[0];
+  const { id } = useParams();
+  const postId = id as unknown as string;
+  let post = NOTICEDATA.filter((post) => post.id.toString() === postId)[0];
   let descript = "로컬푸드 소식을 공지드립니다.";
   let submenu = "고객센터";
   let selectedLink = "/notice";
@@ -18,33 +20,33 @@ function BoardPost({ title }: { title: string }) {
     case "공지사항":
       submenu = "고객센터";
       selectedLink = "/notice";
-      post = NOTICEDATA.filter((post) => post.id === postId)[0];
+      post = NOTICEDATA.filter((post) => post.id.toString() === postId)[0];
       descript = "로컬푸드 소식을 공지드립니다.";
       break;
 
     case "레시피":
       submenu = "커뮤니티";
       selectedLink = "/recipe";
-      post = RECIPEDATA.filter((post) => post.id === postId)[0];
+      post = RECIPEDATA.filter((post) => post.id.toString() === postId)[0];
       descript = "로컬푸드 소식을 공지드립니다.";
       break;
 
     case "상품후기":
       submenu = "커뮤니티";
       selectedLink = "/review";
-      post = REVIEWDATA.filter((post) => post.id === postId)[0];
+      post = REVIEWDATA.filter((post) => post.id.toString() === postId)[0];
       descript = "고객님들께서 남기신 후기들 중 베스트를 뽑아 보여드립니다. ";
       break;
     case "상품응모":
       submenu = "커뮤니티";
       selectedLink = "/applye";
-      post = APPLYEVENTDATA.filter((post) => post.id === postId)[0];
+      post = APPLYEVENTDATA.filter((post) => post.id.toString() === postId)[0];
       descript = "응모 이벤트가 진행 중인지 확인 후 응모해주세요.";
       break;
     case "이벤트":
       submenu = "커뮤니티";
       selectedLink = "/event";
-      post = EVENTDATA.filter((post) => post.id === postId)[0];
+      post = EVENTDATA.filter((post) => post.id.toString() === postId)[0];
       descript = "";
       break;
   }
