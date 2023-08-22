@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { HiHeart, HiOutlineHeart } from "react-icons/hi";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { HiHeart } from "react-icons/hi";
 import Header from "Header/Header";
 import Footer from "Footer/Footer";
 import DetailImg from "./Parts/DetailImg";
@@ -14,9 +14,10 @@ import useStore from "Store/Storage";
 import { PRODUCTDATA } from "Store/ProductData";
 
 function ProductDetail() {
+  const { id } = useParams();
   const navigate = useNavigate();
-  const productOrder: number = parseInt(window.location.pathname.slice(6, window.location.pathname.length)) - 1;
-  const product = PRODUCTDATA[productOrder];
+
+  const product = PRODUCTDATA[parseInt(id as unknown as string) - 1];
   const login = useStore((state) => state.login);
   const cartItemList = useStore((state) => state.cartItemList);
   const setCartItemList = useStore((state) => state.setCartItemList);
