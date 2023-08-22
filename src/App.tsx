@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "Pages/Home";
 import ProductDetail from "Pages/ProductDetail";
 import ProductList from "Pages/ProductList";
@@ -23,18 +23,18 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/itemlist" element={<ProductList />} />
-          <Route path="/item/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/order/complete" element={<OrderComplete />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/notice" element={<Notice />} />
-          <Route path="/notice/:id" element={<BoardPost title="공지사항" />} />
+          <Route path="itemlist" element={<ProductList />} />
+          <Route path="item/:id" element={<ProductDetail />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="order" element={<Order />} />
+          <Route path="order/complete" element={<OrderComplete />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="notice" element={<Notice />} />
+          <Route path="notice/:id" element={<BoardPost title="공지사항" />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/inquiry" element={<Inquiry />} />
           <Route path="/recipe" element={<Recipe />} />
