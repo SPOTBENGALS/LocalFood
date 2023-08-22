@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LocalFood/static/css/main.2c6fbd09.css",
-    "main.js": "/LocalFood/static/js/main.8083ec08.js",
+    "main.js": "/LocalFood/static/js/main.3e45019b.js",
     "static/js/787.ed9a4f62.chunk.js": "/LocalFood/static/js/787.ed9a4f62.chunk.js",
     "static/media/apple_detail.jpg": "/LocalFood/static/media/apple_detail.e40769123ba4bcdae777.jpg",
     "static/media/banner01.png": "/LocalFood/static/media/banner01.91a82a675053dd68b55a.png",
@@ -72,11 +72,11 @@
     "static/media/slick.woff": "/LocalFood/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/LocalFood/index.html",
     "main.2c6fbd09.css.map": "/LocalFood/static/css/main.2c6fbd09.css.map",
-    "main.8083ec08.js.map": "/LocalFood/static/js/main.8083ec08.js.map",
+    "main.3e45019b.js.map": "/LocalFood/static/js/main.3e45019b.js.map",
     "787.ed9a4f62.chunk.js.map": "/LocalFood/static/js/787.ed9a4f62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c6fbd09.css",
-    "static/js/main.8083ec08.js"
+    "static/js/main.3e45019b.js"
   ]
 }
