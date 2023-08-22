@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import styled from "@emotion/styled";
 import { AiFillYoutube } from "react-icons/ai";
 import { BiLogoInstagramAlt, BiLogoFacebookCircle, BiLogoBlogger } from "react-icons/bi";
 import FooterImg01 from "../Images/Logos/gongjeongwui.png";
 import FooterImg02 from "../Images/Logos/logo_tosspay.svg";
+import styled from "@emotion/styled";
+import useStore from "Store/Storage";
 
 function Footer() {
+  const login = useStore((state) => state.login);
   return (
     <Container>
       <WidthLimit>
@@ -30,8 +32,8 @@ function Footer() {
               <Link to="#">이메일무단수집거부</Link>
             </Links>
             <Buttons>
-              <Link to="#">공지사항</Link>
-              <Link to="#">1:1 문의</Link>
+              <Link to="/notice">공지사항</Link>
+              {login ? <Link to="/inquiry">1:1 문의</Link> : <Link to="/login">1:1 문의</Link>}
             </Buttons>
             <Icons>
               <Link to="#">
